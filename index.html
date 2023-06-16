@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CompuWiser Tools</title>
+  <script>
+    function createBookmarklet() {
+      var userInput = prompt("Please enter your command");
+      if (userInput) {
+        var bookmarkletText = `javascript:navigator.clipboard.writeText("${userInput}").then(function() {console.log("Command line code copied to clipboard!");});`;
+        navigator.clipboard.writeText(bookmarkletText).then(function () {
+          /* clipboard successfully set */
+          alert("Bookmarklet copied to clipboard!");
+        }, function () {
+          /* clipboard write failed */
+          alert("Failed to copy bookmarklet to clipboard.");
+        });
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <main>
+    <button type="button" onclick="createBookmarklet()">create</button>
+  </main>
+</body>
+
+</html>
