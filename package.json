@@ -21,6 +21,7 @@
     "@types/react-dom": "^18.2.5",
     "gh-pages": "^5.0.0",
     "react-scripts": "^5.0.1",
+    "sass": "^1.63.4",
     "typescript": "^4.9.5"
   },
   "eslintConfig": {
