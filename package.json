@@ -1,6 +1,6 @@
 {
   "name": "compuwiser-homepage",
-  "homepage": "http://compuwiser.github.io/home",
+  "homepage": "http://compuwiser.github.io",
   "version": "0.1.0",
   "private": true,
   "scripts": {
