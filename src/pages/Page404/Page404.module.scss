@@ -1,0 +1,51 @@
+@use "/src/styles/_functions.scss" as *;
+
+.container {
+  background: var(--color-gray-1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - toRem(75));
+  transition: 1s;
+}
+
+.error {
+  color: var(--color-gray-8);
+  box-shadow: 0 toRem(5) 0 toRem(-2) var(--color-gray-8);
+  text-align: center;
+  animation: fadein 1.2s ease-in;
+
+  >.code {
+    font-size: toRem(168);
+    margin: 0;
+    text-shadow: 0 toRem(6) 1px rgba(0, 0, 0, 0.0980392),
+      0 0 toRem(5) rgba(0, 0, 0, 0.0980392),
+      0 1px toRem(3) rgba(0, 0, 0, 0.298039),
+      0 toRem(3) toRem(5) rgba(0, 0, 0, 0.2),
+      0 toRem(5) toRem(10) rgba(0, 0, 0, 0.247059),
+      0 toRem(10) toRem(10) rgba(0, 0, 0, 0.2),
+      0 toRem(20) toRem(20) rgba(0, 0, 0, 0.14902);
+  }
+
+  >.desc {
+    font-weight: 400;
+    padding-bottom: toRem(12);
+    text-shadow: 0 toRem(3) toRem(5) rgba(0, 0, 0, 0.5),
+      0 toRem(6) toRem(20) rgba(0, 0, 0, 0.3);
+  }
+}
+
+@keyframes fadein {
+  0% {
+    margin-top: toRem(-50);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
