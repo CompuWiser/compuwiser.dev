@@ -23,11 +23,11 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
   <script>
-    // Checks if a redirect is needed
     (function () {
-      if (sessionStorage.redirect) {
-        history.replaceState({}, "", sessionStorage.redirect);
-        delete sessionStorage.redirect;
+      var redirect = sessionStorage.redirect;
+      delete sessionStorage.redirect;
+      if (redirect && redirect !== location.href) {
+        history.replaceState(null, null, redirect);
       }
     })();
   </script>
