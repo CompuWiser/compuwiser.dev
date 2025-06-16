@@ -11,23 +11,27 @@ function HomePage() {
     {
       icon: <Code size={32} />,
       title: 'Modern Development',
-      description: 'Built with the latest technologies including React 19, TypeScript, and modern tooling for optimal performance.'
+      description:
+        'Built with the latest technologies including React 19, TypeScript, and modern tooling for optimal performance.',
     },
     {
       icon: <Zap size={32} />,
       title: 'Lightning Fast',
-      description: 'Optimized build process with Vite and intelligent code splitting for blazing fast load times.'
+      description:
+        'Optimized build process with Vite and intelligent code splitting for blazing fast load times.',
     },
     {
       icon: <Shield size={32} />,
       title: 'Type Safe',
-      description: 'Fully typed with TypeScript and TanStack Router for maximum developer experience and reliability.'
+      description:
+        'Fully typed with TypeScript and TanStack Router for maximum developer experience and reliability.',
     },
     {
       icon: <Globe size={32} />,
       title: 'Production Ready',
-      description: 'Deployed on GitHub Pages with custom domain, CI/CD pipeline, and modern development practices.'
-    }
+      description:
+        'Deployed on GitHub Pages with custom domain, CI/CD pipeline, and modern development practices.',
+    },
   ];
 
   return (
@@ -39,16 +43,15 @@ function HomePage() {
               Welcome to <span className={styles.highlight}>CompuWiser</span>
             </h1>
             <p className={styles.heroDescription}>
-              A modern, production-ready React application built with the latest technologies and development practices.
+              A modern, production-ready React application built with the latest technologies and development
+              practices.
             </p>
             <div className={styles.heroActions}>
               <button className={styles.primaryButton}>
                 Get Started
                 <Zap size={18} />
               </button>
-              <button className={styles.secondaryButton}>
-                Learn More
-              </button>
+              <button className={styles.secondaryButton}>Learn More</button>
             </div>
           </div>
         </div>

@@ -11,58 +11,58 @@ function AboutPage() {
     {
       label: 'Created',
       value: 'January 2025',
-      icon: <Calendar size={18} />
+      icon: <Calendar size={18} />,
     },
     {
       label: 'Author',
       value: 'CompuWiser Team',
-      icon: <User size={18} />
+      icon: <User size={18} />,
     },
     {
       label: 'Repository',
       value: 'View on GitHub',
       icon: <Github size={18} />,
-      link: 'https://github.com'
+      link: 'https://github.com',
     },
     {
       label: 'Live Site',
       value: 'compuwiser.dev',
       icon: <ExternalLink size={18} />,
-      link: 'https://compuwiser.dev'
-    }
+      link: 'https://compuwiser.dev',
+    },
   ];
 
   const technologies = [
     {
       name: 'React 19',
       description: 'Latest version of React with improved performance and new features',
-      category: 'Frontend Framework'
+      category: 'Frontend Framework',
     },
     {
       name: 'TypeScript',
       description: 'Static type checking for enhanced developer experience',
-      category: 'Language'
+      category: 'Language',
     },
     {
       name: 'Vite',
       description: 'Fast build tool with hot module replacement',
-      category: 'Build Tool'
+      category: 'Build Tool',
     },
     {
       name: 'TanStack Router',
       description: 'Type-safe router with excellent developer experience',
-      category: 'Routing'
+      category: 'Routing',
     },
     {
       name: 'Sass Modules',
       description: 'Scoped CSS with powerful preprocessing capabilities',
-      category: 'Styling'
+      category: 'Styling',
     },
     {
       name: 'pnpm',
       description: 'Fast, disk space efficient package manager',
-      category: 'Package Manager'
-    }
+      category: 'Package Manager',
+    },
   ];
 
   return (
@@ -71,9 +71,9 @@ function AboutPage() {
         <section className={styles.intro}>
           <h1 className={styles.title}>About CompuWiser</h1>
           <p className={styles.description}>
-            CompuWiser is a modern web application showcasing the latest in React development practices. 
-            Built with React 19, TypeScript, and a carefully curated set of modern tools, this project 
-            demonstrates production-ready patterns and best practices for scalable web applications.
+            CompuWiser is a modern web application showcasing the latest in React development practices. Built
+            with React 19, TypeScript, and a carefully curated set of modern tools, this project demonstrates
+            production-ready patterns and best practices for scalable web applications.
           </p>
         </section>
 
@@ -87,7 +87,12 @@ function AboutPage() {
                   <span className={styles.detailLabel}>{detail.label}</span>
                 </div>
                 {detail.link ? (
-                  <a href={detail.link} className={styles.detailLink} target="_blank" rel="noopener noreferrer">
+                  <a
+                    href={detail.link}
+                    className={styles.detailLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     {detail.value}
                   </a>
                 ) : (
