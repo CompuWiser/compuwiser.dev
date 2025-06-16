@@ -1,7 +1,11 @@
 import { createRootRoute, Link, Outlet } from '@tanstack/react-router';
-import { TanStackRouterDevtools } from '@tanstack/router-devtools';
 import { Home, Info } from 'lucide-react';
+import { lazy } from 'react';
 import styles from './Root.module.scss';
+
+const TanStackRouterDevtools = import.meta.env.DEV
+  ? lazy(() => import('@tanstack/router-devtools').then((res) => ({ default: res.TanStackRouterDevtools })))
+  : () => null;
 
 export const Route = createRootRoute({
   component: () => (
@@ -14,7 +18,7 @@ export const Route = createRootRoute({
                 <Home size={24} />
                 <span>CompuWiser</span>
               </Link>
-              
+
               <div className={styles.navLinks}>
                 <Link to="/" className={styles.navLink} activeProps={{ className: styles.active }}>
                   <Home size={18} />
