@@ -4,7 +4,9 @@ import { lazy } from 'react';
 import styles from './Root.module.scss';
 
 const TanStackRouterDevtools = import.meta.env.DEV
-  ? lazy(() => import('@tanstack/router-devtools').then((res) => ({ default: res.TanStackRouterDevtools })))
+  ? lazy(() =>
+      import('@tanstack/react-router-devtools').then((res) => ({ default: res.TanStackRouterDevtools }))
+    )
   : () => null;
 
 export const Route = createRootRoute({
