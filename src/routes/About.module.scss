@@ -1,0 +1,200 @@
+@use '../styles/variables.scss' as *;
+
+.aboutPage {
+  padding: var(--spacing-2xl) 0;
+
+  .intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto var(--spacing-3xl);
+  }
+
+  .title {
+    font-size: var(--font-size-4xl);
+    font-weight: 700;
+    color: var(--color-secondary-900);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .description {
+    font-size: var(--font-size-lg);
+    line-height: var(--line-height-relaxed);
+    color: var(--color-secondary-600);
+    margin: 0;
+  }
+
+  .sectionTitle {
+    font-size: var(--font-size-2xl);
+    font-weight: 600;
+    color: var(--color-secondary-800);
+    margin-bottom: var(--spacing-xl);
+    text-align: center;
+  }
+
+  // Project Details Section
+  .details {
+    margin-bottom: var(--spacing-3xl);
+  }
+
+  .detailsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+  }
+
+  .detailCard {
+    @include card;
+    padding: var(--spacing-xl);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+  }
+
+  .detailHeader {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+    color: var(--color-primary-600);
+  }
+
+  .detailLabel {
+    font-weight: 600;
+    font-size: var(--font-size-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .detailValue {
+    font-size: var(--font-size-lg);
+    font-weight: 500;
+    color: var(--color-secondary-800);
+  }
+
+  .detailLink {
+    font-size: var(--font-size-lg);
+    font-weight: 500;
+    color: var(--color-primary-600);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+
+    &:hover {
+      color: var(--color-primary-700);
+      text-decoration: none;
+    }
+  }
+
+  // Technologies Section
+  .technologies {
+    margin-bottom: var(--spacing-3xl);
+  }
+
+  .techGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+  }
+
+  .techCard {
+    @include card;
+    padding: var(--spacing-xl);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+    }
+  }
+
+  .techHeader {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-md);
+    gap: var(--spacing-md);
+  }
+
+  .techName {
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    color: var(--color-secondary-800);
+    margin: 0;
+  }
+
+  .techCategory {
+    font-size: var(--font-size-xs);
+    font-weight: 500;
+    color: var(--color-primary-600);
+    background: var(--color-primary-100);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+  }
+
+  .techDescription {
+    color: var(--color-secondary-600);
+    line-height: var(--line-height-relaxed);
+    margin: 0;
+  }
+
+  // Architecture Section
+  .architecture {
+    background: var(--color-secondary-50);
+    padding: var(--spacing-2xl);
+    border-radius: var(--radius-xl);
+  }
+
+  .architectureContent {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .featureList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-xl);
+  }
+
+  .feature {
+    h4 {
+      font-size: var(--font-size-lg);
+      font-weight: 600;
+      color: var(--color-secondary-800);
+      margin-bottom: var(--spacing-sm);
+    }
+
+    p {
+      color: var(--color-secondary-600);
+      line-height: var(--line-height-relaxed);
+      margin: 0;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutPage {
+    .detailsGrid {
+      grid-template-columns: 1fr;
+    }
+
+    .techGrid {
+      grid-template-columns: 1fr;
+    }
+
+    .featureList {
+      grid-template-columns: 1fr;
+    }
+
+    .techHeader {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+}
